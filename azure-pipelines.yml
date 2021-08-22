@@ -19,5 +19,5 @@ steps:
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'rccdevcon'
-    appName: 'rccdevapp'
+    appName: 'rrccdevapp'
     package: $(System.DefaultWorkingDirectory)/**/*.zip
