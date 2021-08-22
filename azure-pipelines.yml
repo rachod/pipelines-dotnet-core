@@ -15,3 +15,9 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: '4f200556-7df5-43ba-bdf8-f8faa29f6c7d'
+    appName: 'bgroapp1'
+    package: $(System.DefaultWorkingDirectory)/**/*.zip
